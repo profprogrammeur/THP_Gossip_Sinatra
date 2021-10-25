@@ -1,6 +1,4 @@
-# THP_Gossip_Sinatra
-
-![Capture_potin2](https://user-images.githubusercontent.com/49374683/138783913-a27252bc-8384-4be9-8d40-1d425d38a72f.jpg)
+# :innocent: THP_Gossip_Sinatra :blush:	
 
 ## Purpose
 * A simple CRUD app made with **SINATRA** the ruby gem.
