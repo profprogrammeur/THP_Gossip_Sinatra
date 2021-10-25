@@ -26,6 +26,27 @@ class Gossip
     return all_gossips[id]
   end
 
+  def self.update(id)
+    lines = File.readlines('./db/gossip.csv')
+    lines.delete_at(id) #lines.delete_at(index-1)
+    new_lines = lines
+    File.open('./db/gossip.csv', 'w') {|file| file.truncate(0) }
+    new_lines.each do |line|
+      File.open('./db/gossip.csv', 'a') { |f| f.write line }
+    end
+  end
+
+#   def delete(id)
+#     lines = File.readlines('./db/gossip.csv')
+#     lines.delete_at(id) #lines.delete_at(index-1)
+#     new_lines = lines
+# puts = "OOOOOOOOOOOOOOOOOIIIIIIIIIIIIIIOOOOOOOOOOOOOO"
+#     File.open('./db/gossip.csv', 'w') {|file| file.truncate(0) }
+
+#     new_lines.each do |line|
+#       File.open('./db/gossip.csv', 'a') { |f| f.write line }
+#     end
+#   end
   
  
 end
