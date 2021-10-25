@@ -1,6 +1,6 @@
 # THP_Gossip_Sinatra
 
-![Image1](https://user-images.githubusercontent.com/49374683/138783833-2475105e-bd9a-43dd-8f01-7c82f03261ec.png)
+![Capture_potin2](https://user-images.githubusercontent.com/49374683/138783913-a27252bc-8384-4be9-8d40-1d425d38a72f.jpg)
 
 ## Purpose
 * A simple CRUD app made with **SINATRA** the ruby gem.
