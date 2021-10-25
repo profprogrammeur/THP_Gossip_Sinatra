@@ -1,5 +1,5 @@
 <html>
-  
+
   <head>
     <title>The Gossip Project</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
@@ -7,15 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">  
   </head>
 
-  <body>
+  <body style="margin:50px;">
     <h1>EDIT POTIN</h1>
         <h3>Voici la page du potin n°<%= params['id'] %><br/></h3>
-        <br/>
-        Son auteur : == <%= gossip.author %> ==<br/>
-        Le contenu du potin : == <%= gossip.content %> ==<br/>
-        <br/>
-    <h1>NEW POTIN !</h1>
-      <p>Balance ton potin via le formulaire ci-dessous</p>
+      <p>Modifie ton potin via le formulaire ci-dessous</p>
         <form action='/gossips/<%= params['id'] %>/edit/' method='POST'>
           Saisis ici ton nom :  <input type='text' name='gossip_author' value="<%= gossip.author %>"/><br/>
           Balance ton potin : <input type='text' name='gossip_content' value="<%= gossip.content %>"/><br/>

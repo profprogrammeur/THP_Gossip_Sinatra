@@ -6,13 +6,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">  
   </head>
-  
-  <body>
+
+  <body style="margin:50px;">
     <h1>SHOW POTIN</h1>
       <h3>Voici la page du potin n°<%= params['id'] %><br/></h3>
         <br/>
-        Son auteur : == <%= gossip.author %> ==<br/>
-        Le contenu du potin : == <%= gossip.content %> ==<br/>
+        <table>
+          <thead>
+            <tr>
+              <th>Auteur</th>
+              <th>Potin</th>
+            </tr>
+          </thead>
+            <tbody><tr> 
+             <td> <%= gossip.author %></td>
+              <td><%= gossip.content %> </td>       
+             </tr>
+            </tbody> 
+        </table>
         <br/>
         <a href="/gossips/<%= params['id'] %>/edit/">Editer le potin</a>
         <br/><br/>

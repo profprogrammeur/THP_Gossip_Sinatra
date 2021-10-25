@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">    
   </head>
 
-  <body>
-      <h1>INDEX GOSSIPS</h1>
-      <h3><a href="/gossips/new/">CREER UN NOUVEAU POTIN</a></h3>
-      <% gossips.each_with_index do |gossip,i| %>
-          <p>
-            <a href="/gossips/<%= i%>/">
-              <%= gossip.author %><br/>
-              <%= gossip.content %>        
-            </a>
-          </p>
-        <% end %>
+  <body style="margin:50px;">
+      <h1>INDEX POTINS</h1>
+      <h3><a href="/gossips/new/">CREER UN NOUVEAU POTIN</a></h3>            
+          <table>
+          <thead>
+            <tr>
+              <th>Auteur</th>
+              <th>Potin</th>
+            </tr>
+          </thead>
+            <tbody><tr> <% gossips.each_with_index do |gossip,i| %>
+             <td> <%= gossip.author %></td>
+              <td><a href="/gossips/<%= i%>/"><%= gossip.content %> </a></td>       
+             </tr>
+            </tbody> <% end %>
+            </table>
   </body>
 </html>
